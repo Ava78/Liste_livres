@@ -5,7 +5,7 @@ class LivresController < ApplicationController
   end
 
   def show
-    params[:id]
+    @un_livre = Livre.find(params[:id])
   end
   
   def about
@@ -13,7 +13,7 @@ class LivresController < ApplicationController
 
   def create
   	Livre.create titre: params[:titre]
-    redirect_to "/livres"
+    redirect_to livres_path
   end
 
 

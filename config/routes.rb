@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   
   get 'pages/index'
   get 'about' => 'pages#about'
-  get 'livres' => 'livres#index'  
-
+  get 'livres' => 'livres#index'
   post 'livres' => 'livres#create'
-
+  get 'livres/:id' => 'livres#show'
 
 
   
