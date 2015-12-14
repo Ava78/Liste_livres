@@ -5,11 +5,17 @@ class LivresController < ApplicationController
   end
 
   def show
-    @livres = Livre.all 
+    params[:id]
   end
   
   def about
   end
+
+  def create
+    Livre.create titre: params[:titre]
+    redirect_to "/livres"
+  end
+
 
 
 end

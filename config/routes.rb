@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
-  get 'livres/home'
-
-  get 'livres/index'
-
-  get 'livres/about'
-
   root 'pages#home'
-  get 'about' => 'pages#about'
-  
 
+  get 'about' => 'pages#about'
+  get 'livres' => 'livres#index'
   get 'pages/index'
 
   
