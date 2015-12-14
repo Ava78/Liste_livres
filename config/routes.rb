@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get 'livres' => 'livres#index'
   get 'pages/index'
 
-  post 
+  post 'livres' => 'livres#create'
+
+
 
   
 
