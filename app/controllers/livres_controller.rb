@@ -12,7 +12,7 @@ class LivresController < ApplicationController
   end
 
   def create
-  	Livre.create titre: params[:title]
+  	Livre.create titre: params[:titre]
     redirect_to "/livres"
   end
 
