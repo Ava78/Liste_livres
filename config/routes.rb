@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'about' => 'pages#about'
   get 'livres' => 'livres#index'
-  
+
   #POST Renvoit les informations du formulaire --> create
   post 'livres' => 'livres#create'
 
@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   #dans le view/livres/show    ctrl livres action update
   patch 'livres/:id' => 'livres#update'
 
-  
+  #Routes pour la méthode DELETE - Boutons de suppresion du livre
+  delete 'livres/:id' => 'livres#destroy'
+
 
 
 

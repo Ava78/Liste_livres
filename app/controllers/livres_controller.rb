@@ -10,7 +10,7 @@ class LivresController < ApplicationController
   
   def create
   	Livre.create titre: params[:titre]
-    redirect_to livres_path
+    redirect_to "/livres"
   end
 
   def update
@@ -19,6 +19,13 @@ class LivresController < ApplicationController
     @un_livre.save
     redirect_to "/livres/#{params[:id]}"
   end
+
+  def destroy
+    @un_livre = Livre.find(params[:id])
+    @un_livre.destroy
+    redirect_to "/livres"
+  end
+
 
 
 

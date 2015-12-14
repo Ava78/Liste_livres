@@ -2,12 +2,21 @@
 
 <p><%= @un_livre.titre %></p>
 
-
-
 <!--Formulaire pour modifier le titre d'un livre -->
 <%= form_tag "/livres/#{@un_livre.id}", method: "patch" do %>
   <input type ="text" name="Titre">
   <input type="submit" value="Modifier le Livre">
 <% end %>
 
+<%= form_tag "/livres/#{@un_livre.id}", method: "delete" do %>
+  <input type="submit" value="Supprimer">
+<% end %> 
+
+
+
+
+
+
 <a href="/livres">Revenir à la liste</a>
+
+
