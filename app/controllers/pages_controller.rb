@@ -7,6 +7,6 @@ class PagesController < ApplicationController
   end
 
   def about
-  	
+  	@mes_livres = Livre.all
   end
 end
