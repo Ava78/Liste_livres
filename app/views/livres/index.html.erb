@@ -4,4 +4,14 @@
   <p><%= un_livre.titre %></p>
  <% end %>
 
+<form action="/livres" method="post">
+
+<%= form_tag "/livres", method: "post" do %>
+  <input type="text" name: "titre du livre">
+  <input type="submit" value="Ajouter un livre">
+<% end %>
+
+</form>
+
+
 
