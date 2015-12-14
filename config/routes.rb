@@ -4,11 +4,21 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'about' => 'pages#about'
   get 'livres' => 'livres#index'
+  
+  #POST Renvoit les informations du formulaire --> create
   post 'livres' => 'livres#create'
+
   get 'livres/:id' => 'livres#show'
 
+  #PATCH pour la partie Formulaire de Modif du livre
+  #dans le view/livres/show    ctrl livres action update
+  patch 'livres/:id' => 'livres#update'
 
   
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
