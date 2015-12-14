@@ -1,7 +1,7 @@
 <h1>Ma Liste de Livres</h1>
 
 <% @mes_livres.each do |un_livre| %>
-  <p><%= un_livre.titre %></p>
+  <p><a href="/livres/<%=un_livre.id%>"><%= un_livre.titre %></a></p>
  <% end %>
 
 
